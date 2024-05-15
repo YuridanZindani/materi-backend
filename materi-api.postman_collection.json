@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "14749107-d3f4-4ffd-b460-566b2dd8302b",
+		"name": "materi-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22578542"
+	},
+	"item": [
+		{
+			"name": "Read All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{carrier}}/all"
+			},
+			"response": []
+		},
+		{
+			"name": "Read By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "{{carrier}}/6644ddfb27e066e3f92f78c2"
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nama",
+							"value": "Bunga",
+							"type": "text"
+						},
+						{
+							"key": "umur",
+							"value": "17",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "Pakuwon",
+							"type": "text"
+						},
+						{
+							"key": "nomor_tlpn",
+							"value": "082345678901",
+							"type": "text"
+						},
+						{
+							"key": "berat_badan",
+							"value": "45",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{carrier}}/add"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "carrier",
+			"value": "https://materi-backend.vercel.app/crud/data",
+			"type": "string"
+		}
+	]
+}
